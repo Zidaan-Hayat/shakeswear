@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<title>Shakeswear</title>
+
+	<script defer src="./script.js"></script>
+</head>
+<body>
+
+	<style>
+		* { padding: 0; margin: 0; font-family: 'Montserrat', sans-serif; }
+
+		a { text-decoration: inherit; color: #2286D3; }
+
+		div { padding-top: 1.5rem; }
+		
+		.red-text { color: red; }
+		.hidden { display: none; }
+		
+		.btn {
+			border: none;
+
+			padding: .625rem 1rem;
+
+			padding: 1.25rem 2rem;
+
+			font-weight: 700;
+			text-decoration: inherit;
+
+			background-color: #62B6CB;
+			color: black;
+
+			border-radius: .375rem;
+
+			transition: background-color .2s, color .2s;
+		}
+
+		.btn:hover { background-color: #1B4965; color: white; }
+		.btn:active { background-color: #112E40; }
+
+		#topbar {
+			padding: 0;
+			margin: .5rem;
+			opacity: .9;
+		}
+
+		#topbar-icon {
+			width: 7rem;
+			height: auto;
+		}
+
+		#content {
+			text-align: center;
+			padding-top: 10vh;
+		}
+
+		#prompt-box {
+			font-size: 2rem;
+		}
+
+		#word-btn {
+			padding: 1rem;
+			
+			border: .2rem solid black;
+			
+			width: fit-content;
+			
+			color: inherit;
+			font-size: inherit;
+			background-color: inherit;
+		}
+
+		#word-btn:hover {
+			background-color: #62B6CB;
+		}
+
+		#word-btn:active {
+			background-color: #1B4965;
+			color: white;
+		}
+
+		#response-box {
+			font-size: 3.5rem;
+		}
+	</style>
+
+	<div id="topbar">
+		<img id="topbar-icon" src="/favicon.ico" alt="">
+	</div>
+	
+	<div id="content">
+
+		<div id="prompt-box">Generate a swear word that <a id="shakespeare-jump" target="_blank" title="[Wikipedia] William Shakespeare" href="https://en.wikipedia.org/wiki/William_Shakespeare">Shakespeare</a> would've used</div>
+		
+		<div id="response-box">
+			<button id="word-btn"><span id="word">?</span></button>
+		</div>
+
+		<div id="btn-box"> 
+			<button id="generate-btn" class="btn">Generate</button>
+		</div>
+
+		<div id="notif" class="hidden"></div>
+	</div>
+
+</body>
+</html>
